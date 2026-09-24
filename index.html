@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Testseite</title>
+  <style>
+    :root {
+      --bg: #f6f7f4;
+      --fg: #1c2321;
+      --muted: #5b6662;
+      --accent: #1f6f5c;
+      --line: #d9ddd7;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #141917;
+        --fg: #e8ece9;
+        --muted: #9aa5a0;
+        --accent: #5fc4a8;
+        --line: #2b332f;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 2rem 1.25rem;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.6;
+    }
+    main {
+      width: 100%;
+      max-width: 34rem;
+      border-left: 3px solid var(--accent);
+      padding-left: 1.5rem;
+    }
+    h1 {
+      margin: 0 0 0.75rem;
+      font-size: clamp(2rem, 6vw, 2.75rem);
+      line-height: 1.15;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    p { margin: 0 0 1rem; color: var(--muted); font-size: 1.125rem; }
+    ul {
+      margin: 1.5rem 0 0;
+      padding: 0;
+      list-style: none;
+      border-top: 1px solid var(--line);
+    }
+    li {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--line);
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      font-size: 0.95rem;
+    }
+    li span:first-child { color: var(--muted); }
+    li span:last-child { color: var(--accent); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Die Seite ist erreichbar.</h1>
+    <p>Diese Testseite wird über GitHub Pages ausgeliefert und läuft hinter dem CDN.</p>
+    <ul>
+      <li><span>Hosting</span><span>GitHub Pages</span></li>
+      <li><span>Auslieferung</span><span>CDN</span></li>
+      <li><span>Inhalt</span><span>statisch</span></li>
+    </ul>
+  </main>
+</body>
+</html>
